@@ -1,2 +1,2 @@
-This file is created using the 'x' mode in Pytho.
-Next line.
+This file is overwritten using 'w' mode in Python.
+Have a nice day!
