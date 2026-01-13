@@ -1,3 +1,5 @@
 This is a test file.
 We are learning file handling in the python.
 Modes to open a file are: r, w, a, t, b
+This has content has been written using the 'a' mode.'n'a' mode is used to add new content at the end of the file.
+Good bye!
