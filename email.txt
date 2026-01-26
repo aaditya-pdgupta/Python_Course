@@ -1,0 +1,5 @@
+Alice alice-cool_123@example.com 986662220002
+Carol carol_123@example.com 988822223
+John john.dan.12345@example.com 9999999999
+Invalids emails are:
+-@example.com
