@@ -45,22 +45,72 @@ b.place(x = 170, y = 180)
 b = Button(window, text = '0', width = 12, command = lambda:click(0))
 b.place(x = 10, y = 240)
 
-b = Button(window, text = '+', width = 12)
+#OPERATORS
+def add():
+    n1 = e.get()
+    global math
+    math ='addition'
+    global i
+    i= int(n1)
+    e.delete(0, END)
+
+
+b = Button(window, text = '+', width = 12, command = add)
 b.place(x = 80, y = 240)
 
-b = Button(window, text = '-', width = 12)
+def sub():
+    n1 = e.get()
+    global math 
+    math = 'subtraction'
+    global i
+    i= int(n1)
+    e.delete(0, END)
+
+b = Button(window, text = '-', width = 12, command = sub)
 b.place(x = 170, y = 240)
 
-b = Button(window, text = '*', width = 12)
+def mul():
+    n1 = e.get()
+    global math 
+    math =  'multiplication'
+    global i
+    i= int(n1)
+    e.delete(0, END)
+
+b = Button(window, text = '*', width = 12,  command = mul)
 b.place(x = 10, y = 300)
 
-b = Button(window, text = '/', width = 12)
+def div():
+    n1 = e.get()
+    global math
+    math =  'division'
+    global i
+    i= int(n1)
+    e.delete(0, END)
+
+b = Button(window, text = '/', width = 12, command = div)
 b.place(x = 80, y = 300)
 
-b = Button(window, text = '=', width = 12)
+def equal():
+    n2 = e.get()
+    e.delete(0, END)
+    if math == 'addition':
+        e.insert(0, i + int(n2))
+    elif math == "subtraction":
+        e.insert(0, i - int(n2))
+    elif math ==  "multiplication":
+        e.insert(0, i * int(n2))
+    elif math == "division":
+        e.insert(0, i / int(n2))
+    
+
+b = Button(window, text = '=', width = 12, command  = equal)
 b.place(x = 170, y = 300)
 
-b = Button(window, text = 'clear', width = 12)
+def clear():
+    e.delete(0, END)
+
+b = Button(window, text = 'clear', width = 12, command = clear)
 b.place(x = 10, y = 360)
 
 mainloop()
