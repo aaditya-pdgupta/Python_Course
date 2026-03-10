@@ -13,6 +13,7 @@ e.place(x = 0, y = 0)
 #Buttons
 def click(num):
     result = e.get()
+    e.delete(0, END)
     e.insert(0, str(result) + str(num))
 b = Button(window, text = '1',  width = 12, command = lambda:click(1))
 b.place(x = 10, y =60)
